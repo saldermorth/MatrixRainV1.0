@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace ConsoleApp14
 {
@@ -13,20 +14,21 @@ namespace ConsoleApp14
 
         static void Main(string[] args)
         {
-            
 
+            int Width = 111;
+            int Height = 50;
             //for (int k = 0; k > 10; k++)
             for(; ;)
 
             {
                 Random random2 = new Random();
                 int i = random2.Next(0, 4);
-               
+                Thread.Sleep(5);
                 if (i == 1)
                 {
                     Console.Write(' ');
                     Random random = new Random();
-                    Console.SetCursorPosition(random.Next(111), random.Next(50));
+                    Console.SetCursorPosition(random.Next(Width), random.Next(Height));
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Random rnd = new Random();
                     char randomChar = (char)rnd.Next('a', 'z');
@@ -36,7 +38,7 @@ namespace ConsoleApp14
                 {
                     Console.Write(' ');
                     Random random3 = new Random();
-                    Console.SetCursorPosition(random3.Next(111), random3.Next(50));
+                    Console.SetCursorPosition(random3.Next(Width), random3.Next(Height));
                     Console.ForegroundColor = ConsoleColor.Green;
                     Random rnd = new Random();
                     char randomChar = (char)rnd.Next('0', '9');
@@ -47,8 +49,8 @@ namespace ConsoleApp14
                 {
                     Console.Write(' ');
                     Random random4 = new Random();
-                    Console.SetCursorPosition(random4.Next(111), random4.Next(50));
-                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.SetCursorPosition(random4.Next(Width), random4.Next(Height));
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Random rnd = new Random();
                     char randomChar = (char)rnd.Next('A', 'Z');
                     Console.WriteLine(randomChar);
@@ -57,7 +59,7 @@ namespace ConsoleApp14
                 {
                     Console.Write(' ');
                     Random random5 = new Random();
-                    Console.SetCursorPosition(random5.Next(111), random5.Next(50));
+                    Console.SetCursorPosition(random5.Next(Width), random5.Next(Height));
                     Console.ForegroundColor = ConsoleColor.Black;
                     Random rnd = new Random();
                     char randomChar = (char)rnd.Next('A', 'Z');
